@@ -3,11 +3,11 @@ const hamburgerMenu = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
 hamburgerMenu.addEventListener('click', () => {
-  hamburgerMenu.classList.toggle('active');
+  hamburger.classList.toggle('active');
   navMenu.classList.toggle('active');
 });
 
-document.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('click', () => {
+document.querySelector('.nav-link').forEach((link) => link.addEventListener('click', () => {
   hamburgerMenu.classList.remove('active');
   navMenu.classList.remove('active');
 }));
@@ -66,7 +66,7 @@ const projectCardData = [
 
 const displayPopupItems = (projectCard) => {
   const headerDetails = document.querySelector('.popup-header-container h2');
-  headerDetails.textContent = projectCard.title;
+  header.textContent = projectCard.title;
 
   const technologiesList = document.querySelector('.popup-tech-list');
 
@@ -99,7 +99,7 @@ function CreateProjectCard(projectCard) {
   const projectButton = document.createElement('button');
   projectButton.classList.add('card-hover');
   projectButton.addEventListener('click', () => {
-    displayPopupItems(projectCard);
+    displayItems(projectCard);
   });
 
   const projectCardDataDiv = document.createElement('div');
